@@ -1,0 +1,248 @@
+import { QuizQuestion, PointBadge } from '../types/lesson';
+
+export const SCORE_BADGES: PointBadge[] = [
+  {
+    id: 'bronze',
+    name: 'Bronze Storyteller',
+    title: 'The First Spark',
+    icon: '🥉',
+    threshold: 25,
+    description: 'Earned by answering questions actively and taking detailed notes in the physical notebook!',
+    color: 'from-amber-700 to-amber-900 border-amber-600',
+  },
+  {
+    id: 'silver',
+    name: 'Silver Wordsmith',
+    title: 'Plot Mountain Explorer',
+    icon: '🥈',
+    threshold: 50,
+    description: 'Conquered the climb! Mastered Setting, Characters, and the Inciting Incident.',
+    color: 'from-slate-400 to-slate-600 border-slate-300',
+  },
+  {
+    id: 'gold',
+    name: 'Gold Plot Master',
+    title: 'Climax Conqueror',
+    icon: '🥇',
+    threshold: 75,
+    description: 'Reached the summit of the mountain! Solved the most intense turning points of the stories.',
+    color: 'from-yellow-400 to-amber-600 border-yellow-300',
+  },
+  {
+    id: 'diamond',
+    name: 'Diamond Lore Legend',
+    title: 'Grand Storyteller',
+    icon: '💎',
+    threshold: 100,
+    description: 'Mastered all 6 Story Elements and built an epic story pitch and poster!',
+    color: 'from-cyan-400 to-blue-600 border-cyan-300',
+  },
+  {
+    id: 'mythic',
+    name: 'Mythic Grandmaster',
+    title: 'Storytelling Hall of Fame',
+    icon: '👑',
+    threshold: 125,
+    description: 'Classroom Champions! Flawless teamwork, high-energy participation, and creative genius!',
+    color: 'from-purple-500 to-pink-600 border-purple-300',
+  },
+];
+
+export const QUIZ_QUESTIONS: QuizQuestion[] = [
+  // --- CYCLE 1: Q1 to Q4 (1 question for each of the 4 squads) ---
+  {
+    id: 'q1',
+    round: 1,
+    roundTitle: 'Round 1 · The Plot Mountain',
+    type: 'multiple-choice',
+    question: 'How do we call the most intense, exciting, and crucial turning point of a story?',
+    options: [
+      'The Introduction',
+      'The Climax',
+      'The Table of Contents',
+      'The Back Cover',
+    ],
+    correctAnswer: 'The Climax',
+    explanation: 'From Slide 6: "The Climax is the most intense part of a story" — the very summit of the Plot Mountain!',
+    slideRef: 'Part 2 · Slide 5 & 6',
+    points: 25,
+    assignedTeamIndex: 0, // Assigned to Squad 1
+  },
+  {
+    id: 'q2',
+    round: 1,
+    roundTitle: 'Round 1 · Story Settings',
+    type: 'multiple-choice',
+    question: 'In "Harry Potter and the Philosopher\'s Stone", what is the primary SETTING of the story?',
+    options: [
+      'A space station orbiting Saturn',
+      'Hogwarts, an enchanted medieval castle in the late 1990s',
+      'A submarine under the Pacific Ocean',
+      'A shopping mall in modern Tokyo',
+    ],
+    correctAnswer: 'Hogwarts, an enchanted medieval castle in the late 1990s',
+    explanation: 'Slide 7: Most of the story takes place in Hogwarts, an enchanted medieval castle at an unspecified time in the late 1990s!',
+    slideRef: 'Part 2 · Slide 7',
+    points: 25,
+    assignedTeamIndex: 1, // Assigned to Squad 2
+  },
+  {
+    id: 'q3',
+    round: 1,
+    roundTitle: 'Round 1 · Conflicts & Hurdles',
+    type: 'multiple-choice',
+    question: 'In "Diary of a Wimpy Kid", what is Greg Heffley’s central CONFLICT?',
+    options: [
+      'Surviving middle school among taller, meaner older teenagers',
+      'Building a rocket ship to travel to Mars',
+      'Learning how to swim with dolphins in Australia',
+      'Winning an Olympic gold medal in gymnastics',
+    ],
+    correctAnswer: 'Surviving middle school among taller, meaner older teenagers',
+    explanation: 'Slide 8: Greg starts middle school and finds himself facing the hazards of growing up and meaner older teenagers!',
+    slideRef: 'Part 2 · Slide 8',
+    points: 25,
+    assignedTeamIndex: 2, // Assigned to Squad 3
+  },
+  {
+    id: 'q4',
+    round: 1,
+    roundTitle: 'Round 1 · Setting True or False',
+    type: 'true-false',
+    question: 'True or False: In the Disney movie "Brave", the SETTING is Medieval Scotland.',
+    options: ['True', 'False'],
+    correctAnswer: 'True',
+    explanation: 'Slide 11 confirms: Setting = Medieval Scotland! The highlands, castles, and ancient standing stones.',
+    slideRef: 'Part 2 · Slide 11',
+    points: 20,
+    assignedTeamIndex: 3, // Assigned to Squad 4
+  },
+
+  // --- CYCLE 2: Q5 to Q8 (Second question for each squad) ---
+  {
+    id: 'q5',
+    round: 2,
+    roundTitle: 'Round 2 · The Grand Line Quest',
+    type: 'multiple-choice',
+    question: 'In the "One Piece" project example (Slide 15), what is Luffy’s ultimate dream and conflict?',
+    options: [
+      'Open a pizza restaurant in London',
+      'Become the Pirate King and find the One Piece treasure',
+      'Retire quietly on a peaceful farm',
+      'Become an admiral of the Marines',
+    ],
+    correctAnswer: 'Become the Pirate King and find the One Piece treasure',
+    explanation: 'Slide 15: "Luffy sets sail to become the Pirate King and find the One Piece, facing powerful enemies along the way!"',
+    slideRef: 'Part 2 · Slide 15',
+    points: 25,
+    assignedTeamIndex: 0, // Assigned to Squad 1
+  },
+  {
+    id: 'q6',
+    round: 2,
+    roundTitle: 'Round 2 · Introductions & Exposition',
+    type: 'multiple-choice',
+    question: 'What crucial information do you discover in the INTRODUCTION of a story?',
+    options: [
+      'The final credits and movie soundtrack list',
+      'The main characters and the setting (where & when)',
+      'The list of mistakes the director made',
+      'The exact price of the book in the bookstore',
+    ],
+    correctAnswer: 'The main characters and the setting (where & when)',
+    explanation: 'Slide 6 Sharing Time: The Introduction introduces who the characters are and where/when the story begins!',
+    slideRef: 'Part 2 · Slide 6',
+    points: 25,
+    assignedTeamIndex: 1, // Assigned to Squad 2
+  },
+  {
+    id: 'q7',
+    round: 2,
+    roundTitle: 'Round 2 · Winding Down the Mountain',
+    type: 'fill-blank',
+    question: 'The events that happen right after the climax are called the ________ Action.',
+    options: ['FALLING', 'RISING', 'BORING', 'JUMPING'],
+    correctAnswer: 'FALLING',
+    explanation: 'Slide 5 & 6: The Falling Action guides the story down from the peak toward the resolution!',
+    slideRef: 'Part 2 · Slide 5',
+    points: 25,
+    assignedTeamIndex: 2, // Assigned to Squad 3
+  },
+  {
+    id: 'q8',
+    round: 2,
+    roundTitle: 'Round 2 · Family & Duty',
+    type: 'multiple-choice',
+    question: 'In "Brave", what is the primary CONFLICT between Merida and her mother Queen Elinor?',
+    options: [
+      'Merida wants to learn how to play the violin in Paris',
+      'Merida’s need for independence versus her mom’s values of duty and modesty',
+      'A dragon burned down the family bakery',
+      'They cannot agree on which horse is faster in a race',
+    ],
+    correctAnswer: 'Merida’s need for independence versus her mom’s values of duty and modesty',
+    explanation: 'Slide 11: The conflict is between Merida’s independence and her mother’s traditional expectations of family duty.',
+    slideRef: 'Part 2 · Slide 11',
+    points: 25,
+    assignedTeamIndex: 3, // Assigned to Squad 4
+  },
+
+  // --- CYCLE 3: Q9 to Q12 (Third question for each squad) ---
+  {
+    id: 'q9',
+    round: 3,
+    roundTitle: 'Round 3 · Arcade Legends',
+    type: 'fill-blank',
+    question: 'In Nintendo\'s classic 1983 arcade game, who are the two plumber brothers? Mario and ________.',
+    options: ['LUIGI', 'BOWSER', 'PEACH', 'WARIO'],
+    correctAnswer: 'LUIGI',
+    explanation: 'Slide 10: "Mario and Luigi, two plumbers" who defeat enemies to advance to the next phase!',
+    slideRef: 'Part 2 · Slide 10',
+    points: 20,
+    assignedTeamIndex: 0, // Assigned to Squad 1
+  },
+  {
+    id: 'q10',
+    round: 3,
+    roundTitle: 'Round 3 · The Golden Formula',
+    type: 'fill-blank',
+    question: 'Complete the formula from Slide 8: The Conflict + Main Events + Resolution form one: the ________.',
+    options: ['PLOT', 'SETTING', 'TITLE', 'CHARACTER'],
+    correctAnswer: 'PLOT',
+    explanation: 'Slide 8 reveals: "The conflict, the main events and the resolution form one: the plot!"',
+    slideRef: 'Part 1 · Slide 8',
+    points: 30,
+    assignedTeamIndex: 1, // Assigned to Squad 2
+  },
+  {
+    id: 'q11',
+    round: 3,
+    roundTitle: 'Round 3 · Villains & Neverland',
+    type: 'multiple-choice',
+    question: 'In "Peter and Wendy", who is Peter Pan’s evil arch-enemy and pirate nemesis?',
+    options: [
+      'Captain Hook',
+      'The Lost Boys',
+      'Tinker Bell',
+      'Wendy Darling',
+    ],
+    correctAnswer: 'Captain Hook',
+    explanation: 'Slide 9: Captain Hook is Peter’s evil enemy leading the pirate ship in Neverland!',
+    slideRef: 'Part 2 · Slide 9',
+    points: 25,
+    assignedTeamIndex: 2, // Assigned to Squad 3
+  },
+  {
+    id: 'q12',
+    round: 3,
+    roundTitle: 'Round 3 · Project Time Finale',
+    type: 'true-false',
+    question: 'True or False: According to Slide 14, creating a POSTER is the final creative step of Project Time.',
+    options: ['True', 'False'],
+    correctAnswer: 'True',
+    explanation: 'Slide 14 & 16: "Create a POSTER for the story that you choose" with characters, quotes, and visuals!',
+    slideRef: 'Part 2 · Slide 14 & 16',
+    points: 25,
+    assignedTeamIndex: 3, // Assigned to Squad 4
+  },
+];
